@@ -251,20 +251,20 @@ object ConfigUtils {
     val isTrafficStat = settings.getBoolean(Key.isTrafficStat, false)
     val isUdpDns = settings.getBoolean(Key.isUdpDns, false)
 
-    val profileName = settings.getString(Key.profileName, "default")
-    val proxy = settings.getString(Key.proxy, "127.0.0.1")
-    val sitekey = settings.getString(Key.sitekey, "default")
-    val encMethod = settings.getString(Key.encMethod, "table")
+    val profileName = settings.getString(Key.profileName, "haobug")
+    val proxy = settings.getString(Key.proxy, "107.182.178.119")
+    val sitekey = settings.getString(Key.sitekey, "f85288424d47237e066f5471a9d1f")
+    val encMethod = settings.getString(Key.encMethod, "rc4-md5")
     val route = settings.getString(Key.route, "all")
 
     val remotePort: Int = try {
-      settings.getString(Key.remotePort, "1984").toInt
+      settings.getString(Key.remotePort, "23333").toInt
     } catch {
       case ex: NumberFormatException =>
         1984
     }
     val localPort: Int = try {
-      settings.getString(Key.localPort, "1984").toInt
+      settings.getString(Key.localPort, "1080").toInt
     } catch {
       case ex: NumberFormatException =>
         1984

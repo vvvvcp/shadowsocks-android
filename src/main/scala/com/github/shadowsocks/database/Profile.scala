@@ -46,10 +46,10 @@ class Profile {
   var id: Int = 0
 
   @DatabaseField
-  var name: String = "Untitled"
+  var name: String = "haobug"
 
   @DatabaseField
-  var host: String = ""
+  var host: String = "45.56.90.173"
 
   @DatabaseField
   var localPort: Int = 1080
